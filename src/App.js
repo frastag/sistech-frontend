@@ -22,7 +22,7 @@ function Copyright() {
   );
 }
 
-function ButtonAppBar() {
+function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -54,7 +54,7 @@ function ButtonAppBar() {
 export default function App() {
   return (
     <Container maxWidth="sm">
-      <ButtonAppBar></ButtonAppBar>
+      <Header></Header>
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
           Material UI Create React App example
