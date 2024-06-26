@@ -2,14 +2,25 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import CircleIcon from '@mui/icons-material/Circle';
+import { Padding, WidthFull } from '@mui/icons-material';
+import Grid from '@mui/material/Grid';
+import AppBar from '@mui/material/AppBar';
+import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import Avatar from '@mui/material/Avatar';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import AdbIcon from '@mui/icons-material/Adb';
+import Header from './Header';
 
-function Copyright() {
+
+
+function Footer() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
@@ -22,9 +33,10 @@ function Copyright() {
   );
 }
 
-function Header() {
+function OurMission() {
   return (
     <Box sx={{ flexGrow: 1 }}>
+      <Header></Header>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -34,7 +46,7 @@ function Header() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <CircleIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Pagina 1
@@ -53,13 +65,14 @@ function Header() {
 
 export default function App() {
   return (
-    <Container maxWidth="sm">
-      <Header></Header>
+    <Container maxWidth={false}>
+     
+      <OurMission></OurMission>
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
           Material UI Create React App example
         </Typography>
-        <Copyright />
+        <Footer />
       </Box>
     </Container>
   );
