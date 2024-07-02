@@ -12,8 +12,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate, Link } from 'react-router-dom';
 
-const pages = [{label:'Home', value:'/'},
- {label:'What We Offer', value:'/'}, {label:'Partnership', rootingTo:'/'}];
+const pages = [{label:'Home', rootingTo:'/'},
+ {label:'What We Offer', rootingTo:'/offer'}, {label:'Partnership', rootingTo:'/partnership'}];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
