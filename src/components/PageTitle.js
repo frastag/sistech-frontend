@@ -1,35 +1,30 @@
 import React from "react";
 import { Box } from '@mui/system';
 
-function PageTitle() {
+function PageTitle({title}) {
     return (
         <React.Fragment>
             <Box
                 sx={{
                     width: 1,
                     height: 150,
-                    bgcolor: '#5b5b5b',
+                    bgcolor: '#1976D2',
                     textAlign: 'center',
+                    alignItems:'center',
+                    justifyContent:'center',
+                    display:'flex'
                 }}>
                 <Box
                     sx={{
                         width: 1,
-                        bgcolor: '#5b5b5b',
+                        bgcolor: '#1976D2',
                         textAlign: 'center',
                         fontWeight: 'bold',
                         fontSize: 30,
-                        color: '#ffffff'
+                        color: '#ffffff',
+                        margin: 'auto'
                     }}
-                >Our Mission</Box>
-                <Box
-                    sx={{
-                        width: 1,
-                        bgcolor: 'gray',
-                        textAlign: 'center',
-                        fontSize: 18,
-                        color: 'black'
-                    }}
-                >Non-Profit Organization</Box>
+                >{title}</Box>
             </Box>
         </React.Fragment>
     );

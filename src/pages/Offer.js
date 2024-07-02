@@ -2,15 +2,9 @@ import React from "react";
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/system';
-import { ImageOutlined } from '@mui/icons-material';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageTitle from "../components/PageTitle";
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import QuizIcon from '@mui/icons-material/Quiz';
 
 
 const dividerStyle = {
@@ -38,16 +32,6 @@ const boxContentStyle = {
     paddingTop: 5
 }
 
-const faqs = [
-    "Who can benefit from your services? Our services are available to all migrant and refugee women living in Italy. We welcome women of all ages, nationalities and cultural background", 
-    "How can I access your services? You can access our services by contacting us via email, phone oir by filling out the contact form on the website. After the initial contact, we will arrange a meeting to assess your needs and create a personalized plan",
-    "Are the services free? Many of our services are offered free of charge or at a nominal cost, thanks to the support of donations, sponsors and partnerships with non-profit organizations. Some specialized services may require a finantial contribution, but we always strive to ensure accessibility for everyone",
-    "Do we offer legal support? Yes, we provide specialized legal advice on issues related to immigration, refugee rights, and other legal matters. Our team of lawyers is available for individual consultations and informal seminars",
-    "What does the life coaching program include? Our life coaching program includes individual and group sessions focused on self-awareness, self-realization and self-valorization. We work on personal and professional goals, providing toolds and techniques to overcome obstacles and reach your potential",
-"Can I partecipate in your events even if I am not a migrant or refugee? Our events are primarily intended for migrant and refugee women. However, we also organize communitiy events to promote interculturality and solidarity. Contact us to find out which events are open to the public",
-"How can I become a volunteer or partner with your organization? We are always looking for volunteers and partners who share our mission. If you are interested in collaborating with us, visit the \"Partnership and Collaborations\" section on our website or contact us direclty",
-"Where are your offices located? We offer services in various Italian cities, but the best way to reach out us is through digital channels (email/Whatsapp) or by phone."];
-
 function Offer() {
     const [dense, setDense] = React.useState(false);
     const [secondary, setSecondary] = React.useState(false);
@@ -55,36 +39,124 @@ function Offer() {
     return (
         <Container maxWidth={false}>
             <Header></Header>
-            <PageTitle></PageTitle>
+            <PageTitle title={"Discover Our Services"}></PageTitle>
             <Box sx={{ my: 4 }}>
                 <Grid container alignItems='center' justifyContent='center'>
                     <Grid item xs={12} sx={{ paddingTop: 5 }}>
                         <Box sx={boxHeaderStyle}>Join us to Make a Difference</Box>
-                        <Box sx={boxContentStyle}>Our mission to suppor migrant and refugee women in their journey of self-empowerment and self-realization in Italy. To achieve this goal, we aim to create strong and meaningful partnerships with businesses, non profit organizations and local authorities. Discover how you can collaborate with us to build a better future for these women.</Box>
-                    </Grid>
-
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Collaborations with Businesses</Box>
                         <Box sx={boxContentStyle}>
-                            Businesses can play a crucial role in supporting our initiatives and programs. Here are some ways your company can make a difference:
-                            - Corporate Social Responsability (CSR) Programs: Integrate our programs into your CSR initiatives to promote inclusion and gender equality;<br/>
-                            - Financial Support and Sponsorships: Provide funding of sponsors events, workshops and training programs;<br/>
-                            - Job and Internship Opportunities: Offer job opportunities, internships and traineeships to our beneficiaries, contributing to their economic independence;<br/>
-                            - In-Kind Donations: Provide educational and technological tools to support our activities;
+                            <p>Our mission to suppor migrant and refugee women in their journey of self-empowerment and self-realization in Italy. </p>
+                            <p>To achieve this goal, we aim to create strong and meaningful partnerships with businesses, non profit organizations and local authorities. Discover how you can collaborate with us to build a better future for these women.</p>
                         </Box>
                     </Grid>
-                    <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
 
+                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Unlock your potential, achieve your dreams, appreciate your talents with our self-expression services</Box>
+                        <Box sx={boxContentStyle}>
+                            <p>Do you want to explore your talents and express them to the fullest? Would you like to achieve your dreams and follow your passions? Together we can go on a journey to express yourself at the best.</p>
+                            <p>Do you want to explore and understand yourself better, your values, passions and goals?? With the <b>Self-Knowledge</b> you will learn to recognize your strengths and overcome your fears.</p>
+                            <p>Want to set and pursue personal and professional goals? <b>Self-Realization path</b> will help you to develop a clear vision of your future and chart a path to achieve it.</p>
+                            <p>Looking for strengthering self-esteem and learn to value your skills and experiences? With the <b>Self-Value process</b> you will learn to effectively communicate your abilities and feel confident in your potential.</p>
+                            <p>Our certified coaches work with you to transform challenges into opportunities.</p>
+                        </Box>
+                    </Grid>
 
-                    <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Collaborations with Non-Profit Organizaitons</Box>
-                        <Box sx={boxContentStyle}>We work in synergy with non-profit organizations to expand our impact and reach more beneficiaries. Areas of collaboration include<br/>
-                        - Resource sharing: exchanbge resources, skills and knowledge to improve the effectiveness of our programs.</Box>
+                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Want to feel more connected and supported? Discover our sisterhood club!</Box>
+                        <Box sx={boxContentStyle}>
+                            <p>The key to the happiness of migrant and refugee women is sociality, friendship, networks</p>
+                            <p>
+                                - Want to meet others like you? Join our community of migrant and refugee women. Connect with women who share similar experiences and build lasting friendships and support networks <br/>
+                                - Looking for a safe space to share your story? Join our Sisterhood club, a welcoming place where women can share their stories, experiences and resources. We foster solidarity and mutual support.<br/>
+                                 - Curious about other cultures? Partecipate in our cultural events, language courses, and intercultural activities. Learn to appreaciate and celebrate diverse traditions and experiences.
+                            </p>
+                            <p>These activities not only enhance psychological well-being but also help you feel a stronger sense of community and belonging. Join us and be part of a supportive and vibrant community.</p>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Legal Advice and Rights</Box>
+                        <Box sx={boxContentStyle}>
+                            <p>
+                                Legal advice is essential to ensure that migrant and refugee women can live safely and with dignity.
+                            </p>
+                            <p>
+                                We offer: <br />
+                                - <b>Personalized Legal Advice:</b> individual meetings with lawyers specialized in immigration and refugee law and opportunities<br />
+                                - <b>Information on Rights:</b> workshops and informative seminars on the rights of migrants and refugees. Learn about your rights and the resources available to you<br />
+                                - <b>Assistance with Legal Procedures:</b> support in completing documents, preparing asylum applications and family reunification process.
+                            </p>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Looking to Gain Indipendence? Explore Our Enterpreneurship and Employment Services!</Box>
+                        <Box sx={boxContentStyle}>
+                            <p>
+                                Curious about building a Better Life and becoming financially independent?
+                            </p>
+                            <p>
+                                - Know your rights: join workshops to learn about your rights in the country<br />
+                                - Start your own business: get training and support to launch and run your own business<br />
+                                - Find a Great Job: We'll help you with your job search, resume, writing and skills developemtn<br />
+                                - Manage your money: learn how to save budget and plan for your finantial future<br />
+                                - Partecipate in initiatives on the rights of migrant and refugee women as activist
+                            </p>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Struggling with Language Barriers? We Offer Education and Translation Services to Help</Box>
+                        <Box sx={boxContentStyle}>
+                            <p>
+                                Moving to a new country can be tough, especially when it comes to language and finding your way around. <br />
+                                Would you like you feel welcome and empowered? Bridge the gap!
+                            </p>
+                            <p>
+                                Speak the Language:<br />
+                                - Need to learn italian? We offer courses to help you improve your communication skills and feel better.
+                            </p>
+                            <p>
+                                Breaking Down the Barriers:<br />
+                                - Dealing with confusing documents? We can help translate legal, medical and educational papers.<br />
+                                - You can even become a volunteer translator yourself!<br />
+                            </p>
+                            <p>
+                                Upgrade your skills:<br />
+                                - Looking to advance your carrer? We offer training courses and certifications to help you develop the skills employers are looking for.<br />
+                            </p>
+                            <p>
+                                Education Made Easy:<br />
+                                - Want to go back to school or learn a new trade? We can help you navigate the process of enrolling, finding scolarships and finding the right program.<br />
+                            </p>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Box
+                            sx={{
+                                width: 1,
+                                height: 150,
+                                bgcolor: '#5b5b5b',
+                                textAlign: 'center',
+                            }}>
+                            <Box
+                                sx={{
+                                    width: 1,
+                                    bgcolor: '#5b5b5b',
+                                    textAlign: 'center',
+                                    fontWeight: 'bold',
+                                    fontSize: 30,
+                                    color: '#ffffff'
+                                }}
+                            >These services are designed to help you realize your full potential.
+                            
+                            </Box></Box>
                     </Grid>
                 </Grid>
             </Box>
 
-            <Footer/>
+            <Footer />
         </Container>
     );
 }

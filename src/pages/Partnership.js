@@ -55,49 +55,54 @@ function Partnership() {
     return (
         <Container maxWidth={false}>
             <Header></Header>
-            <PageTitle></PageTitle>
+            <PageTitle title={"Welcome to Our Partnership Page"}></PageTitle>
             <Box sx={{ my: 4 }}>
                 <Grid container alignItems='center' justifyContent='center'>
-                    <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Who We Are</Box>
-                        <Box sx={boxContentStyle}>Welcome to our website! We are a start-up dedicated to supporting migrant and refugee women in Italy. Our Mission is to promote self-awareness, self-realization and the well-being of the women we serve through a variety of services ranging from life coaching to personal development, legal advice to language and professional training.</Box>
+                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Join us to Make a Difference</Box>
+                        <Box sx={boxContentStyle}>Our mission to suppor migrant and refugee women in their journey of self-empowerment and self-realization in Italy. To achieve this goal, we aim to create strong and meaningful partnerships with businesses, non profit organizations and local authorities. Discover how you can collaborate with us to build a better future for these women.</Box>
                     </Grid>
 
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Our Mission And Values</Box>
+                    <Grid item xs={8} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Collaborations with Businesses</Box>
                         <Box sx={boxContentStyle}>
-                            - Female Empowerment: we promote the process of change and rebirth for migrant and refugee women;<br/>
-                            - Interculturality and Sisterhood: Through the Sisterhood club, we create local and virtual intercultural communities of and for migrant and refugee women;<br/>
-                            - Respect: We recognize and value cultural, emotional and personal diversity;<br/>
+                            Businesses can play a crucial role in supporting our initiatives and programs. Here are some ways your company can make a difference:
+                            - Corporate Social Responsability (CSR) Programs: Integrate our programs into your CSR initiatives to promote inclusion and gender equality;<br/>
+                            - Financial Support and Sponsorships: Provide funding of sponsors events, workshops and training programs;<br/>
+                            - Job and Internship Opportunities: Offer job opportunities, internships and traineeships to our beneficiaries, contributing to their economic independence;<br/>
+                            - In-Kind Donations: Provide educational and technological tools to support our activities;
                         </Box>
                     </Grid>
                     <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
 
+
                     <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Our Team</Box>
-                        <Box sx={boxContentStyle}>Our team consists of experts in various fields, including psychologists, life coaches, lawyers, trainers, translators and cultural mediators. 
-                        We work together in an integrated, interdisciplinary and personalized manner to help migrant and refugee women discover their resources, talents and express their hidden potential</Box>
+                    <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Collaborations with Non-Profit Organizaitons</Box>
+                        <Box sx={boxContentStyle}>We work in synergy with non-profit organizations to expand our impact and reach more beneficiaries. Areas of collaboration include<br/>
+                            - Resource sharing: exchanbge resources, skills and knowledge to improve the effectiveness of our programs.<br/>
+                            - Joint Projects: develop and implement joint projects aimed at supporting migrant and refugee women<br/>
+                            - Advocacy and Awareness: Collaborate to raise awareness about the rights of migrant and refugee women and promote social change.
+                        </Box>
                     </Grid>
 
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Discover Our Story...</Box>
+                    <Grid item xs={8} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Collaborations with Local Authorities</Box>
                         <Box sx={boxContentStyle}>
-                            Our organization was born from the passion of a group of refugee women, experts in various sectors, united by a sense of sisterhood and a desire to make a difference in the lives of migrant and refugee women. 
-                            We believe that every woman has the right to live their dignity, security and opportunity. Our commitment is to create a welcoming and inspiring environment where every woman can discover and develop her potential.
+                            Italian municipalities, especially those that are semi-abandoned, represent a great opportunity for the population and integration of migrant and refugee women. Partnerships with local authorities can include:<br/>
+                            - Repopulation programs: collaborate with semi-abandoned municipalities to create repopulation programs that integrate our beneficiaries into local communities<br/>
+                            - Access to local services: Facilitate access for migrant and refugee women to local services, including educational, health and social services<br/>
+                            - Community support: promote community intiatives that foster the social and cultural inclusion of beneficiaries, contributing to the economic and social development of local areas
                         </Box>
                     </Grid>
                     <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
 
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Frequently Asked Questions (FAQ)</Box>
-                    <List dense={dense}>
-                    {faqs.map((faq) => (
-                <ListItem>
-                  <ListItemIcon>
-                    <QuizIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                  >{faq}</ListItemText>
-                </ListItem>
-             ))}
-            </List>
+                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}>Why collaborate with us</Box>
+                        <Box sx={boxContentStyle}>
+                            - Positive Impact: your collaboration can significantly impact the lives of migrant and refugee women, helping them build a better future<br/>
+                            - Shared Values: work together to promote values such as gender equality, inclusion and solidarity<br/>
+                            - Social innovation: Contribute to innovative solutions for complex social challenges, creating lasting changes
+                        </Box>
                     </Grid>
 
                 </Grid>
@@ -105,7 +110,7 @@ function Partnership() {
 
             <Footer/>
         </Container>
-    );
+    )
 }
 
 export default Partnership;
