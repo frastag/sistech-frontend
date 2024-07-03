@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Home', 'What We Offer', 'Partnership', 'Contact Us'];
+const pages = ['Home', 'What We Offer', 'Partnership'];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -110,7 +110,7 @@ const Header = () => {
           >
             Support Foundation
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end'  }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -120,6 +120,9 @@ const Header = () => {
                 {page}
               </Button>
             ))}
+          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
+            <Button variant="contained">Contact Us</Button>
           </Box>
         </Toolbar>
       </Container>
