@@ -37,15 +37,18 @@ function OurMission() {
   return (
     <Box
     sx={{
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+
       width:1,
       height: 150,
-      bgcolor: '#5b5b5b',
+      bgcolor: '#036fc1',
       textAlign: 'center',
     }}>
       <Box
         sx={{
           width:1,
-          bgcolor: '#5b5b5b',
           textAlign: 'center',
           fontWeight: 'bold',
           fontSize: 30,
@@ -54,13 +57,36 @@ function OurMission() {
       >Our Mission</Box>
             <Box
         sx={{
-          width:1,
-          bgcolor: 'gray',
+          width: 1,
           textAlign: 'center',
           fontSize: 18,
-          color: 'black'
+          color: 'black',
+          paddingTop: 3
+        }} 
+
+      
+      >
+        
+        <Grid container>
+  <Grid item xs={5}>
+  </Grid>
+  <Grid item xs={2} sx= {{
+    bgcolor: '#8cbae8',
+  }}>Non-Profit Organization
+  </Grid>
+  <Grid item xs={5}>
+  </Grid>
+</Grid>
+    </Box>
+       <Box
+        sx={{
+          width:1,
+          textAlign: 'center',
+          fontSize: 18,
+          color: 'white',
+          paddingTop: 3
         }}
-      >Non-Profit Organization</Box>
+      >Join us in making a positive impact</Box>
       </Box>
   );
 }
