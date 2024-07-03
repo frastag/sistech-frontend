@@ -38,35 +38,61 @@ const boxContentStyle = {
 
 function OurMission() {
     return (
+      <Box
+      sx={{
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignContent: 'center',
+  
+        width:1,
+        height: 150,
+        bgcolor: '#036fc1',
+        textAlign: 'center',
+      }}>
         <Box
-            sx={{
-                width: 1,
-                height: 150,
-                bgcolor: '#5b5b5b',
-                textAlign: 'center',
-            }}>
-            <Box
-                sx={{
-                    width: 1,
-                    bgcolor: '#5b5b5b',
-                    textAlign: 'center',
-                    fontWeight: 'bold',
-                    fontSize: 30,
-                    color: '#ffffff'
-                }}
-            >Our Mission</Box>
-            <Box
-                sx={{
-                    width: 1,
-                    bgcolor: 'gray',
-                    textAlign: 'center',
-                    fontSize: 18,
-                    color: 'black'
-                }}
-            >Non-Profit Organization</Box>
+          sx={{
+            width:1,
+            textAlign: 'center',
+            fontWeight: 'bold',
+            fontSize: 30,
+            color: '#ffffff'
+          }}
+        >Our Mission</Box>
+        <Box
+          sx={{
+            width: 1,
+            textAlign: 'center',
+            fontSize: 18,
+            color: 'black',
+            paddingTop: 3
+          }} 
+  
+        
+        >
+          
+          <Grid container>
+    <Grid item xs={5}>
+    </Grid>
+    <Grid item xs={2} sx= {{
+      bgcolor: '#8cbae8',
+    }}>Non-Profit Organization
+    </Grid>
+    <Grid item xs={5}>
+    </Grid>
+  </Grid>
+      </Box>
+         <Box
+          sx={{
+            width:1,
+            textAlign: 'center',
+            fontSize: 18,
+            color: 'white',
+            paddingTop: 3
+          }}
+        >Join us in making a positive impact</Box>
         </Box>
     );
-}
+  }
 
 function Home() {
     return (
