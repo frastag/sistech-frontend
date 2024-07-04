@@ -55,7 +55,7 @@ function About() {
     return (
         <Container maxWidth={false}>
             <Header></Header>
-            <PageTitle></PageTitle>
+            <PageTitle title={'About'}></PageTitle>
             <Box sx={{ my: 4 }}>
                 <Grid container alignItems='center' justifyContent='center'>
                     <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
