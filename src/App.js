@@ -5,7 +5,6 @@ import About from './pages/About';
 import Partnership from './pages/Partnership';
 import Offer from './pages/Offer';
 
-
 const App = () => {
   return (
      <>

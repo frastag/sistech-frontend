@@ -1,31 +1,42 @@
 import React from "react";
 import { Box } from '@mui/system';
+import { Typography, ThemeProvider } from "@mui/material";
+import theme from "../utils/constants"
 
-function BlueBox({content}) {
+const boxHeaderStyle = {
+    width: 1,
+    textAlign: 'center'
+}
+
+const boxContentStyle = {
+    width: 1,
+    textAlign: 'center',
+    fontSize: 18,
+    paddingTop: 5
+}
+
+function BlueBox({ content, additionalContent }) {
     return (
         <React.Fragment>
-            <Box
-                sx={{
-                    width: 1,
-                    height: 150,
-                    bgcolor: '#1976D2',
-                    textAlign: 'center',
-                    alignItems:'center',
-                    justifyContent:'center',
-                    display:'flex'
-                }}>
+            <ThemeProvider theme={theme}>
                 <Box
                     sx={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignContent: 'center',
                         width: 1,
-                        bgcolor: '#1976D2',
+                        height: 351,
+                        bgcolor: '#1E3A8A',
                         textAlign: 'center',
-                        fontWeight: 'bold',
-                        fontSize: 30,
-                        color: '#ffffff',
-                        margin: 'auto'
-                    }}
-                >{content}</Box>
-            </Box>
+                    }}>
+                    <Box sx={boxHeaderStyle}>
+                        <Typography variant="h1">{content}</Typography>
+                    </Box>
+                    <Box sx={boxContentStyle}>
+                        <Typography variant="h2">{additionalContent}</Typography>
+                    </Box>
+                </Box>
+            </ThemeProvider>
         </React.Fragment>
     );
 }

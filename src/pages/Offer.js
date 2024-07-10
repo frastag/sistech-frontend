@@ -39,7 +39,7 @@ function Offer() {
     return (
         <Container maxWidth={false}>
             <Header></Header>
-            <BlueBox content={"Discover Our Services"}></BlueBox>
+            <BlueBox content={"Discover Our Services"} additionalContent={"Explore a wide range of services tailored for you"}></BlueBox>
             <Box sx={{ my: 4 }}>
                 <Grid container alignItems='center' justifyContent='center'>
                     <Grid item xs={12} sx={{ paddingTop: 5 }}>

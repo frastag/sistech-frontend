@@ -3,12 +3,14 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/system';
-import { ImageOutlined } from '@mui/icons-material';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CustomCard from "../components/CustomCard";
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
+import { Typography, ThemeProvider } from "@mui/material";
+import CustomCardImage from "../components/CustomCardImage";
+import theme from "../utils/constants"
 
 
 const dividerStyle = {
@@ -23,10 +25,7 @@ const dividerStyle = {
 
 const boxHeaderStyle = {
     width: 1,
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#1976D2'
+    textAlign: 'center'
 }
 
 const boxContentStyle = {
@@ -36,152 +35,134 @@ const boxContentStyle = {
     paddingTop: 5
 }
 
-function OurMission() {
+function HomeTitle() {
     return (
-      <Box
-      sx={{
-      justifyContent: 'center',
-      alignItems: 'center',
-      alignContent: 'center',
-  
-        width:1,
-        height: 150,
-        bgcolor: '#036fc1',
-        textAlign: 'center',
-      }}>
-        <Box
-          sx={{
-            width:1,
-            textAlign: 'center',
-            fontWeight: 'bold',
-            fontSize: 30,
-            color: '#ffffff'
-          }}
-        >Our Mission</Box>
-        <Box
-          sx={{
-            width: 1,
-            textAlign: 'center',
-            fontSize: 18,
-            color: 'black',
-            paddingTop: 3
-          }} 
-  
-        
-        >
-          
-          <Grid container>
-    <Grid item xs={5}>
-    </Grid>
-    <Grid item xs={2} sx= {{
-      bgcolor: '#8cbae8',
-    }}>Non-Profit Organization
-    </Grid>
-    <Grid item xs={5}>
-    </Grid>
-  </Grid>
-      </Box>
-         <Box
-          sx={{
-            width:1,
-            textAlign: 'center',
-            fontSize: 18,
-            color: 'white',
-            paddingTop: 3
-          }}
-        >Join us in making a positive impact</Box>
-        </Box>
+        <React.Fragment>
+            <Box
+                sx={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    alignContent: 'center',
+                    width: 1,
+                    height: 520,
+                    bgcolor: '#1E3A8A',
+                    textAlign: 'center',
+                }}>
+                <Grid container alignItems='center' justifyContent='center'>
+                    <Grid item xs={6} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}><Typography variant="h1">Welcome!</Typography></Box>
+                        <Box sx={boxContentStyle}><Typography variant="h2">This is the place for YOUR rebirth and change… but it depends on YOU.</Typography></Box>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <iframe
+                            height="365"
+                            src="https://www.youtube.com/embed/vMauMq4CEkA"
+                            title="Blue Butterfly Welcome"
+                            frameborder="0"
+                            allow="accelerometer; 
+                                autoplay; 
+                                clipboard-write; 
+                                encrypted-media; 
+                                gyroscope; 
+                                picture-in-picture; 
+                                web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </Grid>
+                </Grid>
+            </Box>
+        </React.Fragment>
+
     );
-  }
+}
 
 function Home() {
     return (
+        <ThemeProvider theme={theme}>
         <Container maxWidth={false}>
             <Header></Header>
-            <OurMission></OurMission>
+            <HomeTitle></HomeTitle>
             <Box sx={{ my: 4 }}>
                 <Grid container alignItems='center' justifyContent='center'>
-                    <Grid item xs={6} sx={{paddingTop:5}}>
-                        <Box sx={boxHeaderStyle}>Benvenuta!</Box>
-                        <Box sx={boxContentStyle}>Questo è il luogo della TUA rinascita...ma dipende da TE</Box>
-                        <Box sx={boxContentStyle}><Button variant="outlined">Learn More</Button></Box>
+                   
+                    <Grid item xs={8} sx={{ paddingTop: 5 }}>
+                        <Box sx={boxHeaderStyle}><Typography variant='sectionTitle'>What can you do for yourself? Use YOUR wings to find the courage to fly.</Typography></Box>
+                        <Box sx={boxContentStyle}>
+                            <Typography variant='sectionContent'>
+                                Just as a beautiful butterfly emerges from a caterpillar, a symbol of positive transformation, so from fragility comes antifragility, rebirth, and resilience.<br></br>
+                                Challenge yourself! Discover all the resources, talent, and potential within you for your self-fulfillment.<br></br>
+                                Become the protagonist of your change, your story, and the future you envision!
+                            </Typography>
+                        </Box>
                     </Grid>
-                    <Grid item xs={6}>
-                    <iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/vMauMq4CEkA" 
-  title="Blue Butterfly Welcome" 
-  frameborder="0" 
-  allow="accelerometer; 
-  autoplay; 
-  clipboard-write; 
-  encrypted-media; 
-  gyroscope; 
-  picture-in-picture; 
-  web-share" allowfullscreen></iframe>
-                    </Grid>
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Cosa puoi fare per te stessa? Usa le TUE ali pre trovare il coraggio di volare</Box>
-                        <Box sx={boxContentStyle}>Come dal bruco spicca il volo una farfalla bellissima, simbolo di trasformazione positiva, così dalla fragilità arriva all'antifragilità, alla rinascita e alla resilienza. <br></br>
-                            Sfida te stessa! Scopri tutte le risorse, il talento e il potenziale che hai dentro di te per la tua autorealizzazione. <br></br>
-                            Diventa protagonista del tuo cambiamento, della tua storia del futuro che ti immagini!</Box>
-                    </Grid>
-                    <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
+
                     <Grid item xs={12} sx={{ minWidth: 275 }}>
                         <Grid container spacing={2} sx={{
                             paddingTop: 5
                         }}>
                             <Grid item xs={3}>
-                                <CustomCard content="Autoconoscenza, Autorealizzazione, AutoValorizazione" action="Esprimi il tuo potenziale"></CustomCard>
+                                <CustomCardImage imageUrl="/static/images/group_of_people.png"></CustomCardImage>
                             </Grid>
                             <Grid item xs={3}>
-                                <CustomCard content="Club della sorellanza" action="Le donne vicino a te"></CustomCard>
+                                <CustomCardImage imageUrl="/static/images/woman_photo.png"></CustomCardImage>
                             </Grid>
                             <Grid item xs={3}>
-                                <CustomCard content="Autoimprenditorialità e lavoro" action="Il tuo talento"></CustomCard>
+                                <CustomCardImage imageUrl="/static/images/women_degree.png"></CustomCardImage>
                             </Grid>
                             <Grid item xs={3}>
-                                <CustomCard content="Formazione" action="Costruisci il tuo futuro"></CustomCard>
+                                <CustomCardImage imageUrl="/static/images/women_smile.png"></CustomCardImage>
                             </Grid>
                         </Grid>
                     </Grid>
+
                     <Grid item xs={12} sx={{
                         textAlign: 'center',
-                        paddingTop: 5
+                        paddingTop: 5,
+                        paddingBottom: 5
                     }}>
                         <Button variant="outlined">Learn More</Button>
                     </Grid>
 
-                    <Grid item xs={4}><Box sx={{
-                        width: 1,
-                        textAlign: 'center'
-                    }}><ImageOutlined sx={{ fontSize: 350 }} /></Box></Grid>
-                    <Grid item xs={8} sx={{ paddingTop: 10 }}><Box sx={boxHeaderStyle}>"I tuoi diritti su cinque dita di una mano". Se tu stessa non rivendichi i TUOI diritti nessuno lo farà
-                        <br /><br /><br />Lo sai che?</Box>
+                    <Grid item xs={4}>
+                        <Box component={'img'} sx={{
+                            width: 1,
+                            textAlign: 'center'
+                             }}
+                             src='/static/images/image_container.png'
+                             >
+                               
+                        </Box>
+                    </Grid>
+                    <Grid item xs={8} sx={{ paddingTop: 10 }}>
+                        <Box sx={boxHeaderStyle}>
+                            <Typography  variant="sectionTitle">"Your rights on five fingers of a hand".<br /><br /></Typography>
+                            <Typography  variant="sectionContent">If you do not claim YOUR rights, no one will.<br /><br /></Typography>
+                            <Typography  variant="sectionSubTitle">Did you know?</Typography>
+                        </Box>
                     </Grid>
 
-                    <Grid container spacing={2} sx={{ paddingBottom: 5 }}>
+                    <Grid container spacing={2} sx={{ paddingBottom: 5, paddingTop: 5}}>
                         <Grid item xs={1}></Grid>
                         <Grid item xs={2} sx={{
                             textAlign: 'center',
                             paddingTop: 5
-                        }}><CustomCard content="Hai diritto ad attivare un conto corrente bancario Normativa XYZ"></CustomCard></Grid>
+                        }}><CustomCard content="You have the right to open a bank account"></CustomCard></Grid>
                         <Grid item xs={2} sx={{
                             textAlign: 'center',
                             paddingTop: 5
-                        }}> <CustomCard content="Hai diritto ad accedere al microcredito"></CustomCard></Grid>
+                        }}> <CustomCard content="You have the right to access microcredit"></CustomCard></Grid>
                         <Grid item xs={2} sx={{
                             textAlign: 'center',
                             paddingTop: 5
-                        }}>  <CustomCard content="Hai diritto al permesso di soggiorno in tempi brevi"></CustomCard></Grid>
+                        }}>  <CustomCard content="You have the right to a residence permit in a short time"></CustomCard></Grid>
                         <Grid item xs={2} sx={{
                             textAlign: 'center',
                             paddingTop: 5
-                        }}>  <CustomCard content="Hai diritto a spostarti in paese ospitante"></CustomCard></Grid>
+                        }}>  <CustomCard content="You have the right to marry in the host country"></CustomCard></Grid>
                         <Grid item xs={2} sx={{
                             textAlign: 'center',
                             paddingTop: 5
-                        }}>  <CustomCard content="Hai diritto alla formazione"></CustomCard></Grid>
+                        }}>  <CustomCard content="You have the right to education"></CustomCard></Grid>
                         <Grid item xs={1}></Grid>
                     </Grid>
 
@@ -196,8 +177,8 @@ function Home() {
                         paddingTop: 5,
                         paddingBottom: 5
                     }}>
-                        <Box sx={boxHeaderStyle}>Unisciti a Noi</Box>
-                        <Box sx={boxContentStyle}>Breeve testo che spiega come le persone possono contribuire tramite donazione (5perMille) o diventando volontari. Per donare o diventare volontari scrivi a mail@mail.com</Box>
+                        <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Join Us</Typography></Box>
+                        <Box sx={boxContentStyle}><Typography variant="sectionContent">Brief text explaining how people can contribute through donations (5perMille) or by becoming volunteers.</Typography></Box>
                         <Box sx={{
                             width: 1,
                             textAlign: 'center',
@@ -215,8 +196,8 @@ function Home() {
                         paddingTop: 5,
                         paddingBottom: 5
                     }}>
-                        <Box sx={boxHeaderStyle}>Become a Partner</Box>
-                        <Box sx={boxContentStyle}>Sei una azienda...breve test che spiega come le persone possono contribuire trramite donazioni (5perMille) o diventando volontari</Box>
+                        <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Become a Partner</Typography></Box>
+                        <Box sx={boxContentStyle}><Typography variant="sectionContent">Sei una azienda...breve test che spiega come le persone possono contribuire trramite donazioni (5perMille) o diventando volontari</Typography></Box>
                         <Box sx={boxContentStyle}><Button variant="outlined">Learn More</Button></Box>
                     </Grid>
 
@@ -226,8 +207,9 @@ function Home() {
                 </Grid>
             </Box>
 
-            <Footer/>
+            <Footer />
         </Container>
+        </ThemeProvider>
     );
 }
 

@@ -2,15 +2,12 @@ import React from "react";
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/system';
-import { ImageOutlined } from '@mui/icons-material';
+import { ForkRight, ImageOutlined } from '@mui/icons-material';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BlueBox from "../components/BlueBox";
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import QuizIcon from '@mui/icons-material/Quiz';
+import { Typography, ThemeProvider } from "@mui/material";
+import theme from "../utils/constants"
 
 
 const dividerStyle = {
@@ -25,16 +22,12 @@ const dividerStyle = {
 
 const boxHeaderStyle = {
     width: 1,
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#1976D2'
+    textAlign: 'center'
 }
 
 const boxContentStyle = {
     width: 1,
     textAlign: 'center',
-    fontSize: 18,
     paddingTop: 5
 }
 
@@ -53,63 +46,92 @@ function Partnership() {
     const [secondary, setSecondary] = React.useState(false);
 
     return (
-        <Container maxWidth={false}>
-            <Header></Header>
-            <BlueBox content={"Welcome to Our Partnership Page"}></BlueBox>
-            <Box sx={{ my: 4 }}>
-                <Grid container alignItems='center' justifyContent='center'>
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Join us to Make a Difference</Box>
-                        <Box sx={boxContentStyle}>Our mission to suppor migrant and refugee women in their journey of self-empowerment and self-realization in Italy. To achieve this goal, we aim to create strong and meaningful partnerships with businesses, non profit organizations and local authorities. Discover how you can collaborate with us to build a better future for these women.</Box>
+        <ThemeProvider theme={theme}>
+            <Container maxWidth={false}>
+                <Header></Header>
+                <BlueBox content={"Welcome to Our Partnership Page"} additionalContent={'Collaborate with us to achieve great things together.'}></BlueBox>
+                <Box sx={{ my: 4 }}>
+                    <Grid container alignItems='center' justifyContent='center'>
+                        <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                            <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Join us to Make a Difference</Typography></Box>
+                            <Box sx={boxContentStyle}>
+                                <Typography variant="sectionContent">
+                                    Our mission is to support migrant and refugee women in their journey of self-empowerment and self-realization in Italy. To achieve this goal, we aim to create strong and meaningful partnerships with businesses, non-profit organizations, and local authorities. Discover how you can collaborate with us to build a better future for these women.
+                                </Typography>
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={9} sx={{ paddingTop: 5 }}>
+                            <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Collaborations with Businesses</Typography></Box>
+                            <Box sx={boxContentStyle}>
+                                <Typography variant="sectionContent">
+                                    Businesses can play a crucial role in supporting our initiatives and programs. Here are some ways your company can make a difference:
+                                    - Corporate Social Responsability (CSR) Programs: Integrate our programs into your CSR initiatives to promote inclusion and gender equality;<br/>
+                                    - Financial Support and Sponsorships: Provide funding of sponsors events, workshops and training programs;<br/>
+                                    - Job and Internship Opportunities: Offer job opportunities, internships and traineeships to our beneficiaries, contributing to their economic independence;<br/>
+                                    - In-Kind Donations: Provide educational and technological tools to support our activities;
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={3} sx={{paddingTop: 5}}>
+                            <Box component={'img'} sx={{
+                                height:500,
+                                }}
+                                justifyContent={"flex-end"}
+                                src='/static/images/collaboration_business.png'
+                                >
+                            </Box>
+                        </Grid>
+
+
+                        <Grid item xs={3}>
+                            <Box component={'img'} sx={{
+                                    height:500,
+                                    }}
+                                    src='/static/images/women.png'
+                                    >
+                                </Box>
+                        </Grid>
+                        <Grid item xs={9} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Collaborations with Non-Profit Organizaitons</Typography></Box>
+                            <Box sx={boxContentStyle}><Typography variant="sectionContent">We work in synergy with non-profit organizations to expand our impact and reach more beneficiaries. Areas of collaboration include<br/>
+                                - Resource sharing: exchanbge resources, skills and knowledge to improve the effectiveness of our programs.<br/>
+                                - Joint Projects: develop and implement joint projects aimed at supporting migrant and refugee women<br/>
+                                - Advocacy and Awareness: Collaborate to raise awareness about the rights of migrant and refugee women and promote social change.</Typography>
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={9} sx={{ paddingTop: 5 }}>
+                            <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Collaborations with Local Authorities</Typography></Box>
+                            <Box sx={boxContentStyle}>
+                            <Typography variant="sectionContent">Italian municipalities, especially those that are semi-abandoned, represent a great opportunity for the population and integration of migrant and refugee women. Partnerships with local authorities can include:<br/>
+                                - Repopulation programs: collaborate with semi-abandoned municipalities to create repopulation programs that integrate our beneficiaries into local communities<br/>
+                                - Access to local services: Facilitate access for migrant and refugee women to local services, including educational, health and social services<br/>
+                                - Community support: promote community intiatives that foster the social and cultural inclusion of beneficiaries, contributing to the economic and social development of local areas
+                            </Typography></Box>
+                        </Grid>
+                        <Grid item xs={3}> <Box component={'img'} sx={{
+                                height:500,
+                                }}
+                                justifyContent={"flex-end"}
+                                src='/static/images/police.png'
+                                >
+                            </Box></Grid>
+
+                        <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                            <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Why collaborate with us</Typography></Box>
+                            <Box sx={boxContentStyle}><Typography variant="sectionContent">
+                                - Positive Impact: your collaboration can significantly impact the lives of migrant and refugee women, helping them build a better future<br/>
+                                - Shared Values: work together to promote values such as gender equality, inclusion and solidarity<br/>
+                                - Social innovation: Contribute to innovative solutions for complex social challenges, creating lasting changes</Typography>
+                            </Box>
+                        </Grid>
+
                     </Grid>
+                </Box>
 
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Collaborations with Businesses</Box>
-                        <Box sx={boxContentStyle}>
-                            Businesses can play a crucial role in supporting our initiatives and programs. Here are some ways your company can make a difference:
-                            - Corporate Social Responsability (CSR) Programs: Integrate our programs into your CSR initiatives to promote inclusion and gender equality;<br/>
-                            - Financial Support and Sponsorships: Provide funding of sponsors events, workshops and training programs;<br/>
-                            - Job and Internship Opportunities: Offer job opportunities, internships and traineeships to our beneficiaries, contributing to their economic independence;<br/>
-                            - In-Kind Donations: Provide educational and technological tools to support our activities;
-                        </Box>
-                    </Grid>
-                    <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
-
-
-                    <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Collaborations with Non-Profit Organizaitons</Box>
-                        <Box sx={boxContentStyle}>We work in synergy with non-profit organizations to expand our impact and reach more beneficiaries. Areas of collaboration include<br/>
-                            - Resource sharing: exchanbge resources, skills and knowledge to improve the effectiveness of our programs.<br/>
-                            - Joint Projects: develop and implement joint projects aimed at supporting migrant and refugee women<br/>
-                            - Advocacy and Awareness: Collaborate to raise awareness about the rights of migrant and refugee women and promote social change.
-                        </Box>
-                    </Grid>
-
-                    <Grid item xs={8} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Collaborations with Local Authorities</Box>
-                        <Box sx={boxContentStyle}>
-                            Italian municipalities, especially those that are semi-abandoned, represent a great opportunity for the population and integration of migrant and refugee women. Partnerships with local authorities can include:<br/>
-                            - Repopulation programs: collaborate with semi-abandoned municipalities to create repopulation programs that integrate our beneficiaries into local communities<br/>
-                            - Access to local services: Facilitate access for migrant and refugee women to local services, including educational, health and social services<br/>
-                            - Community support: promote community intiatives that foster the social and cultural inclusion of beneficiaries, contributing to the economic and social development of local areas
-                        </Box>
-                    </Grid>
-                    <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
-
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Why collaborate with us</Box>
-                        <Box sx={boxContentStyle}>
-                            - Positive Impact: your collaboration can significantly impact the lives of migrant and refugee women, helping them build a better future<br/>
-                            - Shared Values: work together to promote values such as gender equality, inclusion and solidarity<br/>
-                            - Social innovation: Contribute to innovative solutions for complex social challenges, creating lasting changes
-                        </Box>
-                    </Grid>
-
-                </Grid>
-            </Box>
-
-            <Footer/>
-        </Container>
+                <Footer/>
+            </Container>
+        </ThemeProvider>
     )
 }
 

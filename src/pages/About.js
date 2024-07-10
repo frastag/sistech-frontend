@@ -55,7 +55,7 @@ function About() {
     return (
         <Container maxWidth={false}>
             <Header></Header>
-            <BlueBox content={'About'}></BlueBox>
+            <BlueBox content={'Who We Are'} additionalContent={"Welcome to our website! We are a start-up dedicated to supporting migrant and refugee women in Italy. Our mission is to promote self-awareness, self-realization, and the well-being of the women we serve through a variety of services ranging from life coaching to personal development, legal advice to language and professional training."}></BlueBox>
             <Box sx={{ my: 4 }}>
                 <Grid container alignItems='center' justifyContent='center'>
                     <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>
