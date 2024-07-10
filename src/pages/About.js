@@ -5,7 +5,7 @@ import { Box } from '@mui/system';
 import { ImageOutlined } from '@mui/icons-material';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import PageTitle from "../components/PageTitle";
+import BlueBox from "../components/BlueBox";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -55,7 +55,7 @@ function About() {
     return (
         <Container maxWidth={false}>
             <Header></Header>
-            <PageTitle title={'About'}></PageTitle>
+            <BlueBox content={'About'}></BlueBox>
             <Box sx={{ my: 4 }}>
                 <Grid container alignItems='center' justifyContent='center'>
                     <Grid item xs={4}><ImageOutlined sx={{ fontSize: 350 }} /></Grid>

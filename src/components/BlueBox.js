@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from '@mui/system';
 
-function PageTitle({title}) {
+function BlueBox({content}) {
     return (
         <React.Fragment>
             <Box
@@ -24,10 +24,10 @@ function PageTitle({title}) {
                         color: '#ffffff',
                         margin: 'auto'
                     }}
-                >{title}</Box>
+                >{content}</Box>
             </Box>
         </React.Fragment>
     );
 }
 
-export default PageTitle;
+export default BlueBox;
