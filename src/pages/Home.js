@@ -107,7 +107,19 @@ function Home() {
                         <Box sx={boxContentStyle}><Button variant="outlined">Learn More</Button></Box>
                     </Grid>
                     <Grid item xs={6}>
-                        <iframe>https://youtube.com/shorts/vMauMq4CEkA?si=sFh-AhcDbXKWds7w</iframe>
+                    <iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/vMauMq4CEkA" 
+  title="Blue Butterfly Welcome" 
+  frameborder="0" 
+  allow="accelerometer; 
+  autoplay; 
+  clipboard-write; 
+  encrypted-media; 
+  gyroscope; 
+  picture-in-picture; 
+  web-share" allowfullscreen></iframe>
                     </Grid>
                     <Grid item xs={8} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}>Cosa puoi fare per te stessa? Usa le TUE ali pre trovare il coraggio di volare</Box>
                         <Box sx={boxContentStyle}>Come dal bruco spicca il volo una farfalla bellissima, simbolo di trasformazione positiva, così dalla fragilità arriva all'antifragilità, alla rinascita e alla resilienza. <br></br>

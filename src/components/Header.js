@@ -130,7 +130,7 @@ const Header = () => {
             ))}
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-            <Link to="/about"><Button variant="contained">Contact Us</Button></Link>
+            <Link to="/about"><Button variant="contained">Contact us</Button></Link>
           </Box>
         </Toolbar>
       </Container>

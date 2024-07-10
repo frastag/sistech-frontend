@@ -8,7 +8,7 @@ function Footer() {
             <Typography variant="body2" color="text.secondary" align="center">
                 {'Copyright © '}
                 <Link color="inherit" href="https://mui.com/">
-                    Blue Batterfly
+                    Blue Butterfly
                 </Link>{' '}
                 {new Date().getFullYear()}
                 {'.'}

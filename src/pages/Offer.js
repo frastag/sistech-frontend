@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import { Box } from '@mui/system';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import PageTitle from "../components/PageTitle";
+import BlueBox from "../components/BlueBox";
 
 
 const dividerStyle = {
@@ -39,7 +39,7 @@ function Offer() {
     return (
         <Container maxWidth={false}>
             <Header></Header>
-            <PageTitle title={"Discover Our Services"}></PageTitle>
+            <BlueBox content={"Discover Our Services"}></BlueBox>
             <Box sx={{ my: 4 }}>
                 <Grid container alignItems='center' justifyContent='center'>
                     <Grid item xs={12} sx={{ paddingTop: 5 }}>
@@ -132,27 +132,7 @@ function Offer() {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box
-                            sx={{
-                                width: 1,
-                                height: 150,
-                                bgcolor: '#5b5b5b',
-                                textAlign: 'center',
-                            }}>
-                            <Box
-                                sx={{
-                                    width: 1,
-                                    bgcolor: '#5b5b5b',
-                                    textAlign: 'center',
-                                    fontWeight: 'bold',
-                                    fontSize: 30,
-                                    color: '#ffffff'
-                                }}
-                            >These services are designed to help you realize your full potential.
-                            
-                            </Box></Box>
-                    </Grid>
+                    <BlueBox content={"These services are designed to help you realize your full potential."}></BlueBox>
                 </Grid>
             </Box>
 
