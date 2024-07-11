@@ -5,139 +5,47 @@ import { Box } from '@mui/system';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BlueBox from "../components/BlueBox";
-
-
-const dividerStyle = {
-    py: 0,
-    width: '100%',
-    maxWidth: 1,
-    borderRadius: 2,
-    border: '1px solid',
-    borderColor: 'divider',
-    backgroundColor: 'background.paper',
-};
-
-const boxHeaderStyle = {
-    width: 1,
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#1976D2'
-}
-
-const boxContentStyle = {
-    width: 1,
-    textAlign: 'center',
-    fontSize: 18,
-    paddingTop: 5
-}
+import { ThemeProvider } from "@mui/material";
+import theme from "../utils/constants"
+import BoxImageRight from "../components/BoxImageRight";
+import BoxImageLeft from "../components/BoxImageLeft";
 
 function Offer() {
-    const [dense, setDense] = React.useState(false);
-    const [secondary, setSecondary] = React.useState(false);
-
     return (
-        <Container maxWidth={false}>
-            <Header></Header>
-            <BlueBox content={"Discover Our Services"} additionalContent={"Explore a wide range of services tailored for you"}></BlueBox>
-            <Box sx={{ my: 4 }}>
-                <Grid container alignItems='center' justifyContent='center'>
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Join us to Make a Difference</Box>
-                        <Box sx={boxContentStyle}>
-                            <p>Our mission to suppor migrant and refugee women in their journey of self-empowerment and self-realization in Italy. </p>
-                            <p>To achieve this goal, we aim to create strong and meaningful partnerships with businesses, non profit organizations and local authorities. Discover how you can collaborate with us to build a better future for these women.</p>
-                        </Box>
+        <ThemeProvider theme={theme}>
+            <Container maxWidth={false}>
+                <Header></Header>
+                <BlueBox content={"Discover Our Services"} additionalContent={"Explore a wide range of services tailored for you"}></BlueBox>
+                <Box sx={{ my: 4 }}>
+                    <Grid container alignItems='center' justifyContent='center'>
+                        <BoxImageRight title={'Unlock Your Potential, Achieve Your Dreams, Appreciate Your Talents  with Our Self-Expression Services'}
+                            content={'Do you want to explore your talents and express them to the fullest? Would you like to achieve your dreams and follow your passions?\nTogether we can go on a journey  to express yourself at the best.\nWant to explore and understand yourself better, your values, passions, and goals? With the Self-Knowledge you will learn to recognize your strengths and overcome your fears.\nWant to set and pursue personal and professional goals? Self-Realization path will help you to develop a clear vision of your future and chart a path to achieve it.\nLooking for strengthening your self-esteem and learn to value your skills and experiences? With the Self-Value process you will learn to to effectively communicate your abilities and feel confident in your potential.\nOur certified life coaches work with you to transform challenges into opportunities.'}
+                            image={'/static/images/lock.png'}></BoxImageRight>
+
+
+                        <BoxImageLeft title={'Want to Feel More Connected and Supported? Discover Our Sisterhood Club!'}
+                            content={'The key to the happiness of migrant and refugee women is sociality, friendship, networks.\n\nWant to meet others like you? Join our Community of Migrant and Refugee Women. Connect with women who share similar experiences and build lasting friendships and support networks.\n\nLooking for a safe space to share your story? Join our Sisterhood Club, a welcoming place where women can share their stories, experiences, and resources. We foster solidarity and mutual support.\n\nCurious about other cultures? Participate in our cultural events, language courses, and intercultural activities. Learn to appreciate and celebrate diverse traditions and experiences.\n\nThese activities not only enhance psychological well-being but also help you feel a stronger sense of community and belonging. Join us and be part of a supportive and vibrant community!'}
+                            image={'/static/images/sisterhood.png'}></BoxImageLeft>
+
+                        <BoxImageRight title={'Legal Advice and Rights'}
+                            content={'Legal advice is essential to ensure that migrant and refugee women can live safely and with dignity.\n\nWe offer:\n- Personalized Legal Advice: individual meetings with lawyers specialized in immigration and refugee law and opportunities\nInformation on Rights: workshops and informative seminars on the rights of migrants and refugees. Learn about your rights and the resources available to you\n-Assistance with Legal Procedures: support in completing documents, preparing asylum applications and family reunification process.'}
+                            image={'/static/images/legal.png'}></BoxImageRight>
+
+                        <BoxImageLeft title={'Looking to Gain Indipendence? Explore Our Enterpreneurship and Employment Services!'}
+                            content={'Curious about building a Better Life and becoming financially independent?\n\n- Know your rights: join workshops to learn about your rights in the country\n- Start your own business: get training and support to launch and run your own business\n- Find a Great Job: We\'ll help you with your job search, resume, writing and skills developemtn\n- Manage your money: learn how to save budget and plan for your finantial future\n- Partecipate in initiatives on the rights of migrant and refugee women as activist'}
+                            image={'/static/images/independence.png'}></BoxImageLeft>
+
+                        <BoxImageRight title={'Struggling with Language Barriers? We Offer Education and Translation Services to Help'}
+                            content={'Moving to a new country can be tough, especially when it comes to language and finding your way around.\nWould you like you feel welcome and empowered? Bridge the gap!\n\nSpeak the Language:\nNeed to learn Italian? We offer courses to help you improve your communication skills and feel better.\n\nBreak Down the Barriers:\nDealing with confusing documents? We can help translate legal, medical, and educational papers. \nYou can even become a volunteer translator yourself!\n\nUpgrade Your Skills:\nLooking to advance your career? We offer training courses and certifications to help you develop the skills employers are looking for.\n\nEducation Made Easy:\nWant to go back to school or learn a new trade? We can help you navigate the process of enrolling, finding scholarships, and finding the right program'}
+                            image={'/static/images/school.png'}></BoxImageRight>
+
+
+                        <BlueBox content={"These services are designed to help you realize your full potential."}></BlueBox>
                     </Grid>
+                </Box>
 
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Unlock your potential, achieve your dreams, appreciate your talents with our self-expression services</Box>
-                        <Box sx={boxContentStyle}>
-                            <p>Do you want to explore your talents and express them to the fullest? Would you like to achieve your dreams and follow your passions? Together we can go on a journey to express yourself at the best.</p>
-                            <p>Do you want to explore and understand yourself better, your values, passions and goals?? With the <b>Self-Knowledge</b> you will learn to recognize your strengths and overcome your fears.</p>
-                            <p>Want to set and pursue personal and professional goals? <b>Self-Realization path</b> will help you to develop a clear vision of your future and chart a path to achieve it.</p>
-                            <p>Looking for strengthering self-esteem and learn to value your skills and experiences? With the <b>Self-Value process</b> you will learn to effectively communicate your abilities and feel confident in your potential.</p>
-                            <p>Our certified coaches work with you to transform challenges into opportunities.</p>
-                        </Box>
-                    </Grid>
-
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Want to feel more connected and supported? Discover our sisterhood club!</Box>
-                        <Box sx={boxContentStyle}>
-                            <p>The key to the happiness of migrant and refugee women is sociality, friendship, networks</p>
-                            <p>
-                                - Want to meet others like you? Join our community of migrant and refugee women. Connect with women who share similar experiences and build lasting friendships and support networks <br/>
-                                - Looking for a safe space to share your story? Join our Sisterhood club, a welcoming place where women can share their stories, experiences and resources. We foster solidarity and mutual support.<br/>
-                                 - Curious about other cultures? Partecipate in our cultural events, language courses, and intercultural activities. Learn to appreaciate and celebrate diverse traditions and experiences.
-                            </p>
-                            <p>These activities not only enhance psychological well-being but also help you feel a stronger sense of community and belonging. Join us and be part of a supportive and vibrant community.</p>
-                        </Box>
-                    </Grid>
-
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Legal Advice and Rights</Box>
-                        <Box sx={boxContentStyle}>
-                            <p>
-                                Legal advice is essential to ensure that migrant and refugee women can live safely and with dignity.
-                            </p>
-                            <p>
-                                We offer: <br />
-                                - <b>Personalized Legal Advice:</b> individual meetings with lawyers specialized in immigration and refugee law and opportunities<br />
-                                - <b>Information on Rights:</b> workshops and informative seminars on the rights of migrants and refugees. Learn about your rights and the resources available to you<br />
-                                - <b>Assistance with Legal Procedures:</b> support in completing documents, preparing asylum applications and family reunification process.
-                            </p>
-                        </Box>
-                    </Grid>
-
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Looking to Gain Indipendence? Explore Our Enterpreneurship and Employment Services!</Box>
-                        <Box sx={boxContentStyle}>
-                            <p>
-                                Curious about building a Better Life and becoming financially independent?
-                            </p>
-                            <p>
-                                - Know your rights: join workshops to learn about your rights in the country<br />
-                                - Start your own business: get training and support to launch and run your own business<br />
-                                - Find a Great Job: We'll help you with your job search, resume, writing and skills developemtn<br />
-                                - Manage your money: learn how to save budget and plan for your finantial future<br />
-                                - Partecipate in initiatives on the rights of migrant and refugee women as activist
-                            </p>
-                        </Box>
-                    </Grid>
-
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
-                        <Box sx={boxHeaderStyle}>Struggling with Language Barriers? We Offer Education and Translation Services to Help</Box>
-                        <Box sx={boxContentStyle}>
-                            <p>
-                                Moving to a new country can be tough, especially when it comes to language and finding your way around. <br />
-                                Would you like you feel welcome and empowered? Bridge the gap!
-                            </p>
-                            <p>
-                                Speak the Language:<br />
-                                - Need to learn italian? We offer courses to help you improve your communication skills and feel better.
-                            </p>
-                            <p>
-                                Breaking Down the Barriers:<br />
-                                - Dealing with confusing documents? We can help translate legal, medical and educational papers.<br />
-                                - You can even become a volunteer translator yourself!<br />
-                            </p>
-                            <p>
-                                Upgrade your skills:<br />
-                                - Looking to advance your carrer? We offer training courses and certifications to help you develop the skills employers are looking for.<br />
-                            </p>
-                            <p>
-                                Education Made Easy:<br />
-                                - Want to go back to school or learn a new trade? We can help you navigate the process of enrolling, finding scolarships and finding the right program.<br />
-                            </p>
-                        </Box>
-                    </Grid>
-
-                    <BlueBox content={"These services are designed to help you realize your full potential."}></BlueBox>
-                </Grid>
-            </Box>
-
-            <Footer />
-        </Container>
+                <Footer />
+            </Container></ThemeProvider>
     );
 }
 

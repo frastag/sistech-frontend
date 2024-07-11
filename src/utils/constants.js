@@ -1,4 +1,4 @@
-import { Typography, createTheme, ThemeProvider } from "@mui/material";
+import { createTheme } from "@mui/material";
 
 const theme = createTheme();
 theme.typography.h1 = {
@@ -13,6 +13,12 @@ theme.typography.h1 = {
     fontWeight: 400,
     color: '#F3F4F6'
  }
+ theme.typography.h3 = {
+   fontFamily: 'Montserrat',
+   fontSize: 10,
+   fontWeight: 500,
+   color: '#F3F4F6'
+}
  theme.typography.sectionTitle = {
     fontFamily: 'SF Pro',
     fontSize: 48,
