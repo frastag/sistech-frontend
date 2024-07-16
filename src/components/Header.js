@@ -54,7 +54,7 @@ const Header = () => {
               textDecoration: 'none',
             }}
           >
-            Support Foundation
+            Blue Butterflies
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -116,7 +116,7 @@ const Header = () => {
               textDecoration: 'none',
             }}
           >
-            Support Foundation
+            Blue Butterflies
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (

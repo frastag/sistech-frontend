@@ -21,7 +21,7 @@ function BoxImageLeft({ title, content, image }) {
     return (
         <React.Fragment>
             <ThemeProvider theme={theme}>
-                <Grid item xs={3} sx={{ paddingTop: 5 }}>
+                <Grid item md={3} sx={{ paddingTop: 5, display:{xs:'none', md: 'block'} }}>
                     <Box component={'img'} sx={{
                        maxWidth: 400
                     }}
@@ -30,7 +30,7 @@ function BoxImageLeft({ title, content, image }) {
                     >
                     </Box>
                 </Grid>
-                <Grid item xs={9} sx={{ paddingTop: 5 }}>
+                <Grid item xs={12} md={9} sx={{ paddingTop: 5 }}>
                     <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">{title}</Typography></Box>
                     <Box sx={boxContentStyle}>
                         <Typography variant="sectionContent"><div className='new-line'>

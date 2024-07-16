@@ -12,7 +12,6 @@ import { Typography, ThemeProvider } from "@mui/material";
 import CustomCardImage from "../components/CustomCardImage";
 import theme from "../utils/constants"
 
-
 const dividerStyle = {
     py: 0,
     width: '100%',
@@ -44,16 +43,16 @@ function HomeTitle() {
                     alignItems: 'center',
                     alignContent: 'center',
                     width: 1,
-                    height: 520,
+                    minHeight: 520,
                     bgcolor: '#1E3A8A',
                     textAlign: 'center',
                 }}>
                 <Grid container alignItems='center' justifyContent='center'>
-                    <Grid item xs={6} sx={{ paddingTop: 5 }}>
+                    <Grid item xs={12} md={6} sx={{ paddingTop: 5 }}>
                         <Box sx={boxHeaderStyle}><Typography variant="h1">Welcome!</Typography></Box>
                         <Box sx={boxContentStyle}><Typography variant="h2">This is the place for YOUR rebirth and change… but it depends on YOU.</Typography></Box>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         <iframe
                             height="365"
                             src="https://www.youtube.com/embed/vMauMq4CEkA"

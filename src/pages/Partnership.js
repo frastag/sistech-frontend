@@ -10,8 +10,6 @@ import theme from "../utils/constants"
 import BoxImageLeft from "../components/BoxImageLeft";
 import BoxImageRight from "../components/BoxImageRight";
 
-
-
 const boxHeaderStyle = {
     width: 1,
     textAlign: 'center'
