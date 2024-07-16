@@ -30,7 +30,7 @@ const Header = () => {
     <AppBar position="static" color='transparent'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <SvgIcon component={BlueButterfly} sx={{ color: '#F59E0B', transform: 'rotate(-13.97deg)', width: 44.892, height: 38.634, fill: 'none', border: 'transparent', display: { xs: 'none', md: 'flex' }, mr: 1, strokeWidth: 0 }} inheritViewBox />
+          <SvgIcon component={BlueButterfly} sx={{ color: '#F59E0B', transform: 'rotate(-13.97deg)', width: 44.892, height: 38.634, fill: 'none', border: 'transparent', display: { xs: 'none', md: 'flex' }, mr: 1, strokeWidth: 0, marginRight:0 }} inheritViewBox />
           <Typography
             variant="h6"
             noWrap
@@ -91,7 +91,7 @@ const Header = () => {
             </Menu>
           </Box>
 
-          <SvgIcon component={BlueButterfly} sx={{ color: '#F59E0B', transform: 'rotate(-13.97deg)', width: 44.892, height: 38.634, fill: 'none', border: 'transparent', display: { xs: 'flex', md: 'none' }, mr: 1, strokeWidth: 0 }} inheritViewBox />
+          <SvgIcon component={BlueButterfly} sx={{ color: '#F59E0B', transform: 'rotate(-13.97deg)', width: 44.892, height: 38.634, fill: 'none', border: 'transparent', display: { xs: 'flex', md: 'none' }, mr: 1, strokeWidth: 0 , marginRight:0 }} inheritViewBox />
           <Typography
             variant="h6"
             noWrap
