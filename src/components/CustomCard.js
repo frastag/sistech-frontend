@@ -5,7 +5,6 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import { Height } from "@mui/icons-material";
 
 function CustomCard({ content, action }) {
     return (

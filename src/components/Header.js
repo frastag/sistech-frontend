@@ -9,36 +9,28 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { SvgIcon } from '@mui/material';
+import { ReactComponent as BlueButterfly } from "../static/images/icon.svg";
 
-const pages = [{label:'Home', rootingTo:'/'},
- {label:'What We Offer', rootingTo:'/offer'}, {label:'Partnership', rootingTo:'/partnership'}];
+const pages = [{ label: 'Home', rootingTo: '/' },
+{ label: 'What We Offer', rootingTo: '/offer' }, { label: 'Partnership', rootingTo: '/partnership' }];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
     <AppBar position="static" color='transparent'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <SvgIcon component={BlueButterfly} sx={{ color: '#F59E0B', transform: 'rotate(-13.97deg)', width: 44.892, height: 38.634, fill: 'none', border: 'transparent', display: { xs: 'none', md: 'flex' }, mr: 1, strokeWidth: 0 }} inheritViewBox />
           <Typography
             variant="h6"
             noWrap
@@ -47,14 +39,14 @@ const Header = () => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
+              fontFamily: 'Montserrat',
+              fontWeight: 900,
+              fontSize: 26.426,
+              color: '#F59E0B',
               textDecoration: 'none',
             }}
           >
-            Blue Butterflies
+            lue Butterflies
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -86,41 +78,39 @@ const Header = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              
+
+              {pages.map((page) => (
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Home</Typography>
+                  <Link to={page.rootingTo}> <Typography textAlign="center">
+                    {page.label}
+                  </Typography></Link>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">What We Offer</Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Partnership</Typography>
-                </MenuItem>
-       
+              ))}
+
+
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+
+          <SvgIcon component={BlueButterfly} sx={{ color: '#F59E0B', transform: 'rotate(-13.97deg)', width: 44.892, height: 38.634, fill: 'none', border: 'transparent', display: { xs: 'flex', md: 'none' }, mr: 1, strokeWidth: 0 }} inheritViewBox />
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
+              fontFamily: 'Montserrat',
+              fontWeight: 900,
+              fontSize: 26.426,
+              color: '#F59E0B',
               textDecoration: 'none',
             }}
-          >
-            Blue Butterflies
+          >lue Butterflies
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
-             <Link to={page.rootingTo}> <Button
+              <Link to={page.rootingTo}> <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' }}
