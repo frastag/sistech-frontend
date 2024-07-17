@@ -45,7 +45,7 @@ function Offer() {
                     <Grid item xs={12} sx={{ paddingTop: 5 }}>
                         <Box sx={boxHeaderStyle}>Join us to Make a Difference</Box>
                         <Box sx={boxContentStyle}>
-                            <p>Our mission to suppor migrant and refugee women in their journey of self-empowerment and self-realization in Italy. </p>
+                            <p>Our mission is to support migrant and refugee women in their journey of self-empowerment and self-realization in Italy. </p>
                             <p>To achieve this goal, we aim to create strong and meaningful partnerships with businesses, non profit organizations and local authorities. Discover how you can collaborate with us to build a better future for these women.</p>
                         </Box>
                     </Grid>
