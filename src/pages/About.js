@@ -52,63 +52,66 @@ const faqs = [
     "How can I become a volunteer or partner with your organization? We are always looking for volunteers and partners who share our mission. If you are interested in collaborating with us, visit the \"Partnership and Collaborations\" section on our website or contact us direclty",
     "Where are your offices located? We offer services in various Italian cities, but the best way to reach out us is through digital channels (email/Whatsapp) or by phone."];
 
+
 function About() {
     const [dense] = React.useState(false);
 
+    var faqList = faqs.map(function (faq) {
+        return <ListItem>
+            <ListItemIcon>
+                <QuizIcon />
+            </ListItemIcon>
+            <ListItemText
+            > <Typography variant="sectionContent">{faq}</Typography></ListItemText>
+        </ListItem>;
+    })
+
     return (
         <ThemeProvider theme={theme}>
-        <Container maxWidth={false}>
-            <Header></Header>
-            <BlueBox content={'Who We Are'} additionalContent={"Welcome to our website! We are a start-up dedicated to supporting migrant and refugee women in Italy. Our mission is to promote self-awareness, self-realization, and the well-being of the women we serve through a variety of services ranging from life coaching to personal development, legal advice to language and professional training."}></BlueBox>
-            <Box sx={{ my: 4 }}>
-                <Grid container alignItems='center' justifyContent='center'>
-                    <BoxImageRight title={'Our Mission And Values'}
-                        content={'- Female Empowerment: we promote the process of change and rebirth for migrant and refugee women;\n- Interculturality and Sisterhood: Through the Sisterhood club, we create local and virtual intercultural communities of and for migrant and refugee women;\n- Respect: We recognize and value cultural, emotional and personal diversity;'}
-                        image={'/static/images/mission.png'}></BoxImageRight>
+            <Container maxWidth={false}>
+                <Header></Header>
+                <BlueBox content={'Who We Are'} additionalContent={"Welcome to our website! We are a start-up dedicated to supporting migrant and refugee women in Italy. Our mission is to promote self-awareness, self-realization, and the well-being of the women we serve through a variety of services ranging from life coaching to personal development, legal advice to language and professional training."}></BlueBox>
+                <Box sx={{ my: 4 }}>
+                    <Grid container alignItems='center' justifyContent='center'>
+                        <BoxImageRight title={'Our Mission And Values'}
+                            content={'- Female Empowerment: we promote the process of change and rebirth for migrant and refugee women;\n- Interculturality and Sisterhood: Through the Sisterhood club, we create local and virtual intercultural communities of and for migrant and refugee women;\n- Respect: We recognize and value cultural, emotional and personal diversity;'}
+                            image={'/static/images/mission.png'}></BoxImageRight>
 
-                    <BoxImageLeft title={'Our Team'}
-                        content={'Our team consists of experts in various fields, including psychologists, life coaches, lawyers, trainers, translators and cultural mediators.We work together in an integrated, interdisciplinary and personalized manner to help migrant and refugee women discover their resources, talents and express their hidden potential'}
-                    ></BoxImageLeft>
+                        <BoxImageLeft title={'Our Team'}
+                            content={'Our team consists of experts in various fields, including psychologists, life coaches, lawyers, trainers, translators and cultural mediators.We work together in an integrated, interdisciplinary and personalized manner to help migrant and refugee women discover their resources, talents and express their hidden potential'}
+                        ></BoxImageLeft>
 
-                    <BoxImageRight title={'Discover Our Story...'}
-                        content={'Our organization was born from the passion of a group of refugee women, experts in various sectors, united by a sense of sisterhood and a desire to make a difference in the lives of migrant and refugee women. We believe that every woman has the right to live their dignity, security and opportunity. Our commitment is to create a welcoming and inspiring environment where every woman can discover and develop her potential.'}
-                        image={'/static/images/story.png'}></BoxImageRight>
+                        <BoxImageRight title={'Discover Our Story...'}
+                            content={'Our organization was born from the passion of a group of refugee women, experts in various sectors, united by a sense of sisterhood and a desire to make a difference in the lives of migrant and refugee women. We believe that every woman has the right to live their dignity, security and opportunity. Our commitment is to create a welcoming and inspiring environment where every woman can discover and develop her potential.'}
+                            image={'/static/images/story.png'}></BoxImageRight>
 
-<List sx={dividerStyle}>
-                        <Divider component="li" />
-                    </List>
-
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Frequently Asked Questions (FAQ)</Typography></Box>
-                        <List dense={dense}>
-                            {faqs.map((faq) => (
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <QuizIcon />
-                                    </ListItemIcon>
-                                    <ListItemText
-                                    > <Typography variant="sectionContent">{faq}</Typography></ListItemText>
-                                </ListItem>
-                            ))}
+                        <List sx={dividerStyle}>
+                            <Divider component="li" />
                         </List>
-                    </Grid>
-                  
-                    <List sx={dividerStyle}>
-                        <Divider component="li" />
-                    </List>
+
+                        <Grid item xs={12} sx={{ paddingTop: 5 }}><Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Frequently Asked Questions (FAQ)</Typography></Box>
+                            <List dense={dense}>
+                                {faqList}
+                            </List>
+                        </Grid>
+
+                        <List sx={dividerStyle}>
+                            <Divider component="li" />
+                        </List>
 
 
-                    <Grid item xs={12} sx={{ paddingTop: 5 }}>
+                        <Grid item xs={12} sx={{ paddingTop: 5 }}>
                             <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Contact Us</Typography></Box>
                             <Box sx={boxContentStyle}><Typography variant="sectionContent">
                                 You can email us XXX<br></br>Phone: XXX</Typography>
                             </Box>
                         </Grid>
 
-                </Grid>
-            </Box>
+                    </Grid>
+                </Box>
 
-            <Footer />
-        </Container>
+                <Footer />
+            </Container>
         </ThemeProvider>
     );
 }

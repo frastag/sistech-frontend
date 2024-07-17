@@ -16,6 +16,7 @@ const boxContentStyle = {
 }
 
 function BlueBox({ content, additionalContent }) {
+   
     return (
         <React.Fragment>
             <ThemeProvider theme={theme}>
