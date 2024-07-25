@@ -34,34 +34,7 @@ const boxContentStyle = {
     paddingTop: 5
 }
 
-    
 function HomeTitle() {
-    const resources = [
-        {
-            id: 0,
-            title: 'Join Us',
-            content: 'Brief text explaining how people can contribute through donations (5perMille) or by becoming volunteers.',
-        }];
-
-    const ApiExample = () => {
-        const [data, setData] = useState([]);
-      
-        useEffect(() => {
-          const fetchData = async () => {
-            try {
-              const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
-              const result = await response.json();
-              setData(resources);
-            } catch (error) {
-              console.error('Error fetching data:', error);
-            }
-          };
-      
-          fetchData();
-        }, []);
-    }
-
-    ApiExample();
     return (
         <React.Fragment>
             <Box
@@ -103,6 +76,37 @@ function HomeTitle() {
 }
 
 function Home() {
+    // Start: this piece of code is an example on how to call and use rest api
+    const resources = [
+        {
+            id: 0,
+            title: 'Join Us',
+            content: 'Brief text explaining how people can contribute through donations (5perMille) or by becoming volunteers.',
+        }];
+
+    const [data, setData] = useState([]);
+         
+
+    const ApiExample = () => {
+       
+        useEffect(() => {
+          const fetchData = async () => {
+            try {
+              const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+              const result = await response.json();
+              setData(resources);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+          };
+      
+          fetchData();
+        }, []);
+    }
+
+    ApiExample();
+    // End of the example
+
     return (
         <ThemeProvider theme={theme}>
         <Container maxWidth={false}>
@@ -203,8 +207,8 @@ function Home() {
                         paddingTop: 5,
                         paddingBottom: 5
                     }}>
-                        <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Join Us</Typography></Box>
-                        <Box sx={boxContentStyle}><Typography variant="sectionContent">Brief text explaining how people can contribute through donations (5perMille) or by becoming volunteers.</Typography></Box>
+                        <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">{data[0]?.title}</Typography></Box>
+                        <Box sx={boxContentStyle}><Typography variant="sectionContent">{data[0]?.content}</Typography></Box>
                         <Box sx={{
                             width: 1,
                             textAlign: 'center',
