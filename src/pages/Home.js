@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
@@ -34,7 +34,34 @@ const boxContentStyle = {
     paddingTop: 5
 }
 
+    
 function HomeTitle() {
+    const resources = [
+        {
+            id: 0,
+            title: 'Join Us',
+            content: 'Brief text explaining how people can contribute through donations (5perMille) or by becoming volunteers.',
+        }];
+
+    const ApiExample = () => {
+        const [data, setData] = useState([]);
+      
+        useEffect(() => {
+          const fetchData = async () => {
+            try {
+              const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+              const result = await response.json();
+              setData(resources);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+          };
+      
+          fetchData();
+        }, []);
+    }
+
+    ApiExample();
     return (
         <React.Fragment>
             <Box
