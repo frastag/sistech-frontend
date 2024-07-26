@@ -7,6 +7,9 @@ import theme from "../utils/constants"
 import stayUpdated from "../static/images/stay_updated.png";
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
+import { SvgIcon } from '@mui/material';
+import { ReactComponent as BlueButterfly } from "../static/images/logofooter.svg";
+
 
 const dividerStyle = {
     py: 0,
@@ -45,7 +48,7 @@ function Footer() {
                         alignItems: 'center',
                         alignContent: 'center',
                         width: 1,
-                        height: 351,
+                        height: 100,
                         bgcolor: '#1F2937',
                         textAlign: 'center'
                     }}>
@@ -59,14 +62,17 @@ function Footer() {
                         <Grid item xs={3}></Grid>
                     </Grid>
                 </Box>
-                <Typography variant="body2" color="text.secondary" align="center" paddingTop={10}>
-                    {'Copyright © '}
-                    <Link color="inherit" href="https://mui.com/">
-                        Blue Butterfly
-                    </Link>{' '}
-                    {new Date().getFullYear()}
-                    {'.'}
-                </Typography>
+                <Box
+                    sx={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        alignContent: 'center',
+                        width: 1,
+                        height: 50,
+                        textAlign: 'center'
+                    }}><SvgIcon component={BlueButterfly} alignItems='center' justifyContent='center' sx={{ color: '#F59E0B', fill: 'none', border: 'transparent', display: "inline-block", mr: 1, strokeWidth: 0, marginRight:0 }} inheritViewBox /></Box>
+
+                
             </ThemeProvider>
         </React.Fragment>
     );

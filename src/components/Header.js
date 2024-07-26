@@ -30,24 +30,7 @@ const Header = () => {
     <AppBar position="static" color='transparent'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <SvgIcon component={BlueButterfly} sx={{ color: '#F59E0B', transform: 'rotate(-13.97deg)', width: 44.892, height: 38.634, fill: 'none', border: 'transparent', display: { xs: 'none', md: 'flex' }, mr: 1, strokeWidth: 0, marginRight:0 }} inheritViewBox />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'Montserrat',
-              fontWeight: 900,
-              fontSize: 26.426,
-              color: '#F59E0B',
-              textDecoration: 'none',
-            }}
-          >
-            lue Butterflies
-          </Typography>
+          <SvgIcon component={BlueButterfly} sx={{ color: '#F59E0B', width: 300, fill: 'none', border: 'transparent', display: { xs: 'none', md: 'flex' }, mr: 1, strokeWidth: 0, marginRight:0 }} inheritViewBox />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
