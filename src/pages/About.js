@@ -103,7 +103,7 @@ function About() {
                         <Grid item xs={12} sx={{ paddingTop: 5 }}>
                             <Box sx={boxHeaderStyle}><Typography variant="sectionTitle">Contact Us</Typography></Box>
                             <Box sx={boxContentStyle}><Typography variant="sectionContent">
-                                You can email us XXX<br></br>Phone: XXX</Typography>
+                                You can email us info@bluebutterflies.eu</Typography>
                             </Box>
                         </Grid>
 
